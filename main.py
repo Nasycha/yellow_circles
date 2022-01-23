@@ -2,13 +2,14 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QLabel, QGridLay
 from PyQt5.QtGui import QPainter, QPixmap, QPen, QColor
 from PyQt5 import uic
 import sys
+from lol import Ui_MainWindow
 from random import randint 
 
 
-class Yellow_circle(QMainWindow):
+class Yellow_circle(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("untitled.ui", self)
+        self.setupUi(self)
 
         self.label = QLabel()
         canvas = QPixmap(600, 600)
