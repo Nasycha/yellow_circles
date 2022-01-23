@@ -8,7 +8,7 @@ from random import randint
 class Yellow_circle(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("__ui__/untitled.ui", self)
+        uic.loadUi("untitled.ui", self)
 
         self.label = QLabel()
         canvas = QPixmap(600, 600)
