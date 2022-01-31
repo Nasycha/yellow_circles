@@ -27,7 +27,7 @@ class Yellow_circle(QMainWindow, Ui_MainWindow):
         painter = QPainter(self.label.pixmap())
         pen = QPen()
         pen.setWidth(10)
-        pen.setColor(QColor(255, 255, 0))
+        pen.setColor(QColor(*[randint(0, 254) for _ in range(3)]))
         painter.setPen(pen)
         painter.drawEllipse(x, y, w, h)
         painter.end()
